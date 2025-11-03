@@ -27,9 +27,12 @@ Extension Biomass Harvest is found at: (https://github.com/LANDIS-II-Foundation/
   </PropertyGroup>  
 
   <ItemGroup>
-    <PackageReference Include="Landis.Core" Version="3.0.1" />
+    <!--<PackageReference Include="Landis.Core" Version="3.0.1" />-->
+    <ProjectReference Include="..\..\Library-Core\src\Core\Landis.Core.csproj" />
+    <ProjectReference Include="..\..\Library-Universal-Cohort\universal-cohort.csproj" />
+    <ProjectReference Include="..\..\Library-Site-Harvest\src\site-harvest-lib.csproj" />
   </ItemGroup>
-  
+    <!--  
   <ItemGroup>
     <Reference Include="Landis.Library.SiteHarvest-v2">
       <HintPath>lib\Landis.Library.SiteHarvest-v2.dll</HintPath>
@@ -38,6 +41,7 @@ Extension Biomass Harvest is found at: (https://github.com/LANDIS-II-Foundation/
       <HintPath>lib\Landis.Library.UniversalCohorts-v1.dll</HintPath>
     </Reference>
   </ItemGroup>
+        -->
   
 
 </Project>
