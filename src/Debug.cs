@@ -9,7 +9,7 @@ namespace Landis.Library.BiomassHarvest
     /// </summary>
     public static class Debug
     {
-        private static ISiteVar<ISiteCohorts> cohorts;
+        private static ISiteVar<SiteCohorts> cohorts;
 
         /// <summary>
         /// Write the list of cohorts at a site to a log.
@@ -18,7 +18,7 @@ namespace Landis.Library.BiomassHarvest
                                             ActiveSite site)
         {
             if (cohorts == null)
-                cohorts = Model.Core.GetSiteVar<ISiteCohorts>("Succession.BiomassCohorts");
+                cohorts = Model.Core.GetSiteVar<SiteCohorts>("Succession.UniversalCohorts");
 
             int count = 0;  // # of species with cohorts
             foreach (ISpeciesCohorts speciesCohorts in cohorts[site])
